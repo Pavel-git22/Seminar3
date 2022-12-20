@@ -48,19 +48,44 @@
 
 
 
-Console.WriteLine("Input N:");
-double N = Convert.ToDouble(Console.ReadLine());
-Quad(N);
+// Console.WriteLine("Input N:");
+// double N = Convert.ToDouble(Console.ReadLine());
+// Quad(N);
 
-void Quad(double A)
+// void Quad(double A)
+// {
+//     int i = 1;
+//     double z = 0;
+//     while (i < A + 1)
+//     {
+//         z = Math.Pow(i, 2);
+//         Console.WriteLine($" {i} -> {z}:");
+//         i++;
+
+//     }
+// }
+
+
+
+void comparPolindrom(string str)
 {
-    int i = 1;
-    double z = 0;
-    while (i < A + 1)
+    int n = str.Length;
+    string rezStr = "";
+    for (int i = n - 1; i >= 0; i = i - 1)
     {
-        z = Math.Pow(i, 2);
-        Console.WriteLine($" {i} -> {z}:");
-        i++;
 
+        //Console.WriteLine($" {i} -> {str[i]}:");
+        rezStr = rezStr + str[i];
+    }
+    if (str == rezStr)
+        Console.WriteLine($"Число : {rezStr} - полиндром !!!");
+    else
+    {
+        Console.WriteLine($"Число : {rezStr} - НЕ полиндром :-(");
     }
 }
+
+Console.WriteLine("Input число:");
+string pol = Console.ReadLine();
+
+comparPolindrom(pol);
