@@ -95,6 +95,7 @@
 //Задача 21
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 // A (3,6,8); B (2,1,-7), -> 15.84
+//A (7,-5, 0); B (1,-1,9) -> 11.53
 
 void fPoint(float[] arrPoint1)
 {
@@ -119,18 +120,22 @@ void fPoint(float[] arrPoint1)
 }
 
 Console.WriteLine($" ВВедите точку 1 : ");
-float [] P1 = {1, 5, 4};
+float[] P1 = { 0, 0, 0 };
 fPoint(P1);
 Console.WriteLine($" __-->\n  -->  P1[ {P1[0]} , {P1[1]} , {P1[2]} ]");
 Console.WriteLine($"\n\n ВВедите точку 2 : ");
-float [] P2 = {0, 0, 4};
+float[] P2 = { 0, 0, 0 };
 fPoint(P2);
 Console.WriteLine($"\n  -->  P2[ {P2[0]} , {P2[1]} , {P2[2]} ]");
 
 
 
+void Coordinat3D(float[] arr1, float[] arr2)
+{
+    double DL;
+    DL = Math.Round(Math.Sqrt(Math.Pow((arr1[0] - arr2[0]), 2) + Math.Pow((arr1[1] - arr2[1]), 2) + Math.Pow((arr1[2] - arr2[2]), 2)), 4);
+    Console.WriteLine($"Расстояние между двумя точками в 3D пространстве :  -->  {DL}");
+}
 
+Coordinat3D(P1, P2);
 
-
-
-            
