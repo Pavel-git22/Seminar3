@@ -65,27 +65,72 @@
 //     }
 // }
 
+// //Задача 19
 
+// //Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-void comparPolindrom(string str)
+// void comparPolindrom(string str)
+// {
+//     int n = str.Length;
+//     string rezStr = "";
+//     for (int i = n - 1; i >= 0; i = i - 1)
+//     {
+
+//         //Console.WriteLine($" {i} -> {str[i]}:");
+//         rezStr = rezStr + str[i];
+//     }
+//     if (str == rezStr)
+//         Console.WriteLine($"Число : {rezStr} - полиндром !!!");
+//     else
+//     {
+//         Console.WriteLine($"Число : {rezStr} - НЕ полиндром :-(");
+//     }
+// }
+
+// Console.WriteLine("Input число:");
+// string pol = Console.ReadLine();
+
+// comparPolindrom(pol);
+
+//Задача 21
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+
+void fPoint(float[] arrPoint1)
 {
-    int n = str.Length;
-    string rezStr = "";
-    for (int i = n - 1; i >= 0; i = i - 1)
-    {
+    Console.Write("x=");
+    float x = float.Parse(Console.ReadLine());
+    arrPoint1[0] = x;
+    Console.Write("y=");
+    float y = float.Parse(Console.ReadLine());
+    arrPoint1[1] = y;
+    Console.Write("z=");
+    float z = float.Parse(Console.ReadLine());
+    arrPoint1[2] = z;
+    //Console.WriteLine($"Точка 1 ({x} , {y} , {z})");
 
-        //Console.WriteLine($" {i} -> {str[i]}:");
-        rezStr = rezStr + str[i];
-    }
-    if (str == rezStr)
-        Console.WriteLine($"Число : {rezStr} - полиндром !!!");
-    else
+    int count = 3;
+    for (int i = 0; i < count; i++)
     {
-        Console.WriteLine($"Число : {rezStr} - НЕ полиндром :-(");
+        Console.Write($"{arrPoint1[i]} , ");
     }
+
+    //return; //($"{arrPoint1[0] } , {arrPoint1[1]} , {arrPoint1[3]}");
 }
 
-Console.WriteLine("Input число:");
-string pol = Console.ReadLine();
+Console.WriteLine($" ВВедите точку 1 : ");
+float [] P1 = {1, 5, 4};
+fPoint(P1);
+Console.WriteLine($" __-->\n  -->  P1[ {P1[0]} , {P1[1]} , {P1[2]} ]");
+Console.WriteLine($"\n\n ВВедите точку 2 : ");
+float [] P2 = {0, 0, 4};
+fPoint(P2);
+Console.WriteLine($"\n  -->  P2[ {P2[0]} , {P2[1]} , {P2[2]} ]");
 
-comparPolindrom(pol);
+
+
+
+
+
+
+            
